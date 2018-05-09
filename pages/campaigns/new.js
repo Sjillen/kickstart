@@ -24,6 +24,8 @@ class CampaignNew extends Component {
                 });
             Router.pushRoute('/');
         } catch (err) {
+
+            console.log(err.message);
             this.setState({ errorMessage: err.message.toString().split('\n')[0] });
         }
 
