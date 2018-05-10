@@ -34,7 +34,7 @@ class RequestNew extends Component {
 
             Router.pushRoute(`/campaigns/${this.props.address}/requests`);
         } catch (err) {
-            this.setState({ errorMessage: err.message });
+            this.setState({ errorMessage: err.message.toString().split('\n')[0] });
         }
         this.setState({ loading: false });
     };
